@@ -36,7 +36,9 @@ if (!appId) {
             project,
             version:packageJSON.version,
             desc:packageJSON.description,
-            onProgressUpdate:console.log
+            onProgressUpdate:console.log,
+            qrcodeFormat: 'image', 
+            qrcodeOutputDest:`qrcode/preview-qrcode-v.jpg`
         })
         shell.echo('SUCCESS');
         shell.exit(0);
@@ -45,3 +47,5 @@ if (!appId) {
         shell.exit(1);
     }
 })()
+
+
