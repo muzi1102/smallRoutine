@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "routinue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,7 +24,7 @@
     "dev:mp-baidu": "cross-env NODE_ENV=development UNI_PLATFORM=mp-baidu vue-cli-service uni-build --watch",
     "dev:mp-qq": "cross-env NODE_ENV=development UNI_PLATFORM=mp-qq vue-cli-service uni-build --watch",
     "dev:mp-toutiao": "cross-env NODE_ENV=development UNI_PLATFORM=mp-toutiao vue-cli-service uni-build --watch",
-    "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch --mode dev",
+    "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch --mode env",
     "dev:quickapp-native": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-native vue-cli-service uni-build --watch",
     "dev:quickapp-webview": "cross-env NODE_ENV=development UNI_PLATFORM=quickapp-webview vue-cli-service uni-build --watch",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
@@ -33,7 +33,8 @@
     "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
+    "wechat-upload":"node wechatCI.js"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-27920200527001",
@@ -48,12 +49,10 @@
     "@dcloudio/uni-quickapp-native": "^2.0.0-27920200527001",
     "@dcloudio/uni-quickapp-webview": "^2.0.0-27920200527001",
     "@dcloudio/uni-stat": "^2.0.0-27920200527001",
-    "core-js": "^3.6.5",
+    "core-js": "^2.6.5",
     "flyio": "^0.6.2",
-    "miniprogram-ci": "^1.0.33",
     "regenerator-runtime": "^0.12.1",
-    "shelljs": "^0.8.4",
-    "vue": "^2.6.11",
+    "vue": "^2.6.10",
     "vuex": "^3.2.0"
   },
   "devDependencies": {
@@ -67,15 +66,15 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-27920200527001",
     "@dcloudio/webpack-uni-mp-loader": "^2.0.0-27920200527001",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-27920200527001",
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-service": "~4.4.0",
+    "@vue/cli-plugin-babel": "^3.12.0",
+    "@vue/cli-service": "^3.12.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "jest": "^25.4.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.10"
   },
   "browserslist": [
     "Android >= 4",
