@@ -38,7 +38,7 @@ if (!appId) {
             desc:packageJSON.description,
             onProgressUpdate:console.log,
             qrcodeFormat: 'image', 
-            qrcodeOutputDest:`qrcode/preview-qrcode.jpg`
+            qrcodeOutputDest:'qrcode/preview-qrcode.jpg'
         })
         shell.echo('SUCCESS');
         shell.exit(0);
